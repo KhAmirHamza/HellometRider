@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp"
+    android:layout_marginBottom="10dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+            <TextView
+                android:id="@+id/txtv_order_id"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:text="O5415454152"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/txtv_order_status"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:paddingRight="7dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="1.5dp"
+                android:paddingBottom="1.5dp"
+                android:text="Pending"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_txtv_pending"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtv_order_price"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/txtv_order_id"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:text="৳ 500"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#FFAB00"
+                />
+            <TextView
+                android:id="@+id/txtv_order_date"
+                android:layout_alignBaseline="@id/txtv_order_price"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:text="30 Jan, 2021 06:36 PM"
+                android:textSize="12sp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relative_layout_details"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/relative_layout_1"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardview_2"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/lay_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_chat_with_client"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_outline_chat_24"
+                            android:textAllCaps="false"
+                            android:text="Chat-Clinet"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_userLocation"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_baseline_my_location_24"
+                            android:textAllCaps="false"
+                            android:text="Client"
+                            android:textColor="@color/green_700"
+                            android:layout_marginLeft="5dp"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_pharmacy_location"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_baseline_my_location_24"
+                            android:textAllCaps="false"
+                            android:textColor="@color/green_700"
+                            android:layout_marginLeft="5dp"
+                            android:text="Pharmacy"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtv_from"
+                        android:layout_below="@id/lay_6"
+                        android:text="Pharmacy: "
+                        android:paddingTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txtv_pharmacy_name"
+                        android:layout_below="@id/txtv_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="Ma Medical Hall and Pharmacy"/>
+
+                    <TextView
+                        android:id="@+id/txtv_pharmacy_address"
+                        android:layout_below="@id/txtv_pharmacy_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textSize="12sp"
+                        android:text="From: Ma Medical Hall and Pharmacy"/>
+
+
+                    <TextView
+                        android:id="@+id/txtv_to"
+                        android:layout_below="@id/txtv_pharmacy_address"
+                        android:layout_marginTop="8dp"
+                        android:text="Client: "
+                        android:paddingTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txtv_customer_name"
+                        android:layout_below="@id/txtv_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="Md. Someone"/>
+
+                    <TextView
+                        android:id="@+id/txtv_customer_address"
+                        android:layout_below="@id/txtv_customer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textSize="12sp"
+                        android:text="From: Ma Medical Hall and Pharmacy"/>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <TextView
+                android:id="@+id/txtv_payment_method"
+                android:layout_below="@+id/cardview_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment: Cash On Delivery"
+                android:padding="3dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/txtv_requirement"
+                android:layout_below="@+id/txtv_payment_method"
+                android:text="Requirement: Nothing"
+                android:padding="3dp"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/imgv_prescription"
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/txtv_requirement"
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/txtv_requirement"
+                android:id="@+id/recy_order_details"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/iv_order_items"/>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
